@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Application;
+namespace App\Application\Services;
 
-use App\Domain\Video;
+use App\Domain\Entities\Video;
 use App\Domain\ValueObjects\VideoId;
 use App\Domain\ValueObjects\VideoTitle;
 use App\Domain\Interfaces\OutputRepository;

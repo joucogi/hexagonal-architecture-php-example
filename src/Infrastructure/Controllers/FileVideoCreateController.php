@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Infrastructure;
+namespace App\Infrastructure\Controllers;
 
-use App\Application\VideoCreate;
+use App\Application\Services\VideoCreate;
 use App\Application\Adapters\FileOutputRepository;
 
 final class FileVideoCreateController

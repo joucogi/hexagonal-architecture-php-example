@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain;
+namespace App\Domain\Entities;
 
 use App\Domain\ValueObjects\VideoId;
 use App\Domain\ValueObjects\VideoTitle;

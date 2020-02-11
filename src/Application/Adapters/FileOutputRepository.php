@@ -1,7 +1,7 @@
 <?php namespace App\Application\Adapters;
 
 use App\Domain\Interfaces\OutputRepository;
-use App\Domain\Video;
+use App\Domain\Entities\Video;
 
 class FileOutputRepository implements OutputRepository
 {

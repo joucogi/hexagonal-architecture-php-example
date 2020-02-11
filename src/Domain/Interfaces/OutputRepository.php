@@ -1,6 +1,6 @@
 <?php namespace App\Domain\Interfaces;
 
-use App\Domain\Video;
+use App\Domain\Entities\Video;
 
 interface OutputRepository {
 

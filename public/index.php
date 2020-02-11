@@ -4,9 +4,9 @@ require __DIR__.'/../vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
-use App\Infrastructure\FileVideoCreateController;
-use App\Infrastructure\EmailVideoCreateController;
-use App\Infrastructure\EchoVideoCreateController;
+use App\Infrastructure\Controllers\FileVideoCreateController;
+use App\Infrastructure\Controllers\EmailVideoCreateController;
+use App\Infrastructure\Controllers\EchoVideoCreateController;
 
 try
 {
