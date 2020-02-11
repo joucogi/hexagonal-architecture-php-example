@@ -1,0 +1,26 @@
+{
+  "name": "root/hexagonal-example",
+  "description": "Example namespace and Hexagonal Architecture",
+  "authors": [
+    {
+      "name": "Joel Coll",
+      "email": "jcoll@efimatica.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true
+  },
+  "require": {
+    "vlucas/phpdotenv": "^4.1"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  }
+}
