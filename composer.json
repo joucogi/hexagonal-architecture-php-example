@@ -16,7 +16,8 @@
     "optimize-autoloader": true
   },
   "require": {
-    "vlucas/phpdotenv": "^4.1"
+    "vlucas/phpdotenv": "^4.1",
+    "phpmailer/phpmailer": "^6.1"
   },
   "scripts": {
     "post-install-cmd": [
