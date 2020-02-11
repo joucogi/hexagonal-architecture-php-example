@@ -23,6 +23,7 @@
 
 1. Install dependencies: `composer install`
 2. Create a local environment file if needed: `cp .env .env.local`
+3. Fill .env file
 
 ### Application execution
 
