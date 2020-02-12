@@ -3,7 +3,7 @@
 namespace App\Infrastructure\Controllers;
 
 use App\Application\Services\VideoCreate;
-use App\Application\Adapters\EchoOutputRepository;
+use App\Infrastructure\Adapters\EchoOutputRepository;
 
 final class EchoVideoCreateController
 {

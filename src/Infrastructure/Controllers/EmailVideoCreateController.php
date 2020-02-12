@@ -3,7 +3,7 @@
 namespace App\Infrastructure\Controllers;
 
 use App\Application\Services\VideoCreate;
-use App\Application\Adapters\EmailOutputRepository;
+use App\Infrastructure\Adapters\EmailOutputRepository;
 
 final class EmailVideoCreateController
 {

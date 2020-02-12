@@ -1,4 +1,4 @@
-<?php namespace App\Application\Adapters;
+<?php namespace App\Infrastructure\Adapters;
 
 use App\Domain\Interfaces\OutputRepository;
 use App\Domain\Entities\Video;

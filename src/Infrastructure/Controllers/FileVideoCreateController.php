@@ -3,7 +3,7 @@
 namespace App\Infrastructure\Controllers;
 
 use App\Application\Services\VideoCreate;
-use App\Application\Adapters\FileOutputRepository;
+use App\Infrastructure\Adapters\FileOutputRepository;
 
 final class FileVideoCreateController
 {
