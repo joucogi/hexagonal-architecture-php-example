@@ -1,9 +1,10 @@
-<?php namespace App\Infrastructure\Adapters;
+<?php
+namespace App\Infrastructure\Adapters;
 
-use App\Domain\Interfaces\OutputRepository;
-use App\Domain\Entities\Video;
+use App\Domain\Entities\Message;
+use App\Domain\Interfaces\Output;
 
-class FileOutputRepository implements OutputRepository
+class FileOutput implements Output
 {
     private $filename;
 
@@ -12,7 +13,7 @@ class FileOutputRepository implements OutputRepository
         $this->filename = $filename;
     }
 
-    public function print(Video $video)
+    public function print(Message $video): void
     {
         $body = sprintf("%s --> %s.- %s\n", date('Y-m-d H:i:s'), $video->getId(), $video->getTitle());
 
