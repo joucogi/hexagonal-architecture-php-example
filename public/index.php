@@ -1,56 +1,27 @@
 <?php
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
+use App\Infrastructure\Controllers\OutputController;
+use App\Infrastructure\Factories\OutputFactory;
 use Dotenv\Dotenv;
 
-use App\Infrastructure\Controllers\FileVideoCreateController;
-use App\Infrastructure\Controllers\EmailVideoCreateController;
-use App\Infrastructure\Controllers\EchoVideoCreateController;
-
-try
-{
+try {
     // Load environmemt vars
     $dotenv = Dotenv::createImmutable('../');
     $dotenv->load();
 
-    $id = intval($_GET['id']);
+    $id    = (int)$_GET['id'];
     $title = $_GET['title'];
 
-    // Instance controller
-    switch (getenv('OUTPUT_METHOD')) {
-        case 'email':
-
-            $to = getenv('EMAIL_TO');
-            $subject = getenv('EMAIL_SUBJECT');
-            $controller = new EmailVideoCreateController($to, $subject);
-
-        break;
-
-        case 'file':
-
-            $filename = __DIR__ . '/../logs/' . getenv('FILE_FILENAME');
-            $controller = new FileVideoCreateController($filename);
-
-        break;
-
-        case 'echo':
-
-            $controller = new EchoVideoCreateController();
-        
-        break;
-
-        default:
-
-            throw new Exception('Incorrect output');
-
-        break;
-    }
+    // Instance output method
+    $outputMethod  = ucfirst(getenv('OUTPUT_METHOD'));
+    $outputFactory = '\App\Infrastructure\Factories\\' . $outputMethod . 'OutputFactory';
+    $output        = $outputFactory::build();
 
     // Run controller
+    $controller = new OutputController($output);
     $controller($id, $title);
-}
-catch (Exception $e)
-{
+} catch (Exception $e) {
     echo $e->getMessage();
 }
